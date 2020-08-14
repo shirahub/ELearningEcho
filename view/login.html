@@ -6,8 +6,10 @@
     <body>
 
 		Message from login: {{.message}}!
-        <form method="post" action="/login" id="loginform">
-			<input type="text" name="username">
+		<form method="post" action="/login" id="loginform">
+			<label>Username:</label>
+			<input type="text" name="username"><br>
+			<label>Password:</label>
 			<input type="text" name="password">
 			<input type="submit" value="Click here to Submit">
 		  </form>
