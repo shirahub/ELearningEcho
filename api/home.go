@@ -8,6 +8,8 @@ import (
 )
 
 func HomePage(c echo.Context) error {
-	data := model.M{"message": "func HomePage"}
-	return c.Render(http.StatusOK, "login.html", data)
+	data := model.M{"message": "This is the homepage"}
+	return c.Render(http.StatusOK, "homepage.html", data)
 }
+
+//kirim data tapi ga dipake

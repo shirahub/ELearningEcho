@@ -41,6 +41,13 @@ func (t *Renderer) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 // HTML RENDERER CONFIG end ============================================
 
+// JWT CONFIG start ============================================
+// var IsLoggedIn = middleware.JWTWithConfig(middleware.JWTConfig{
+// 	SigningKey: []byte("secret"),
+// })
+
+// JWT CONFIG end ============================================
+
 func main() {
 
 	// Logging file path
@@ -64,8 +71,12 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// Route => handler
-	e.GET("/home", api.HomePage)
-	e.POST("/login", api.UserLogin)
+	e.GET("/home", api.HomePage) //access ini di browser
+	e.GET("/loginpage", api.LoginPage)
+	e.POST("/login", api.UserLogin) //ini diaccess oleh submit button
+
+	r := e.Group("/user")
+	r.GET("/letsstudy", api.LetsStudy)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
