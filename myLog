@@ -1,0 +1,22 @@
+
+2020-08-14T05:41:44+07:00, method=GET, uri=/, status=200
+2020-08-14T05:43:00+07:00, method=GET, uri=/, status=200, error=
+2020-08-14T08:16:15+07:00, method=GET, uri=/home, status=200, error=
+2020-08-14T08:17:22+07:00, method=GET, uri=/login, status=405, error=code=405, message=Method Not Allowed
+2020-08-14T08:58:52+07:00, method=GET, uri=/home, status=500, error=renderer not registered
+2020-08-14T09:02:51+07:00, method=GET, uri=/home, status=500, error=renderer not registered
+2020-08-14T09:02:53+07:00, method=GET, uri=/home, status=500, error=renderer not registered
+2020-08-14T09:04:39+07:00, method=GET, uri=/home, status=200, error=
+2020-08-14T09:15:18+07:00, method=GET, uri=/login, status=405, error=code=405, message=Method Not Allowed
+2020-08-14T09:15:20+07:00, method=GET, uri=/login, status=405, error=code=405, message=Method Not Allowed
+2020-08-14T09:34:35+07:00, method=GET, uri=/home, status=200, error=
+2020-08-14T10:05:18+07:00, method=GET, uri=/home, status=200, error=
+2020-08-14T10:14:25+07:00, method=GET, uri=/home, status=200, error=
+2020-08-14T10:14:29+07:00, method=POST, uri=/login, status=200, error=
+2020-08-14T10:30:58+07:00, method=POST, uri=/login, status=500, error=
+2020-08-14T10:37:06+07:00, method=POST, uri=/login, status=500, error=
+2020-08-14T10:38:59+07:00, method=POST, uri=/login, status=500, error=
+2020-08-14T10:39:59+07:00, method=POST, uri=/login, status=500, error=template: user.html:7:30: executing "user.html" at <.message>: can't evaluate field message in type model.UserData
+2020-08-14T10:42:19+07:00, method=POST, uri=/login, status=200, error=
+2020-08-14T10:42:23+07:00, method=POST, uri=/login, status=200, error=
+2020-08-14T10:43:36+07:00, method=POST, uri=/login, status=500, error=
