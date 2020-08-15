@@ -3,6 +3,7 @@ package api
 import (
 	"E-LearningEcho/model"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -73,10 +74,48 @@ func UserLogin(c echo.Context) error {
 	cookie.Expires = time.Now().Add(24 * time.Hour)
 	c.SetCookie(cookie)
 
-	data := model.M{"message": "Login Success", "name": userData.Fullname}
+	pslist := ShowAllPractice()
+
+	data := model.M{"message": "Login Success", "name": userData.Fullname, "pslist": pslist}
 	return c.Render(http.StatusOK, "user.html", data)
 
 	// return c.JSON(http.StatusOK, map[string]string{
 	// 	"token": t,
 	// })
+}
+
+func ShowAllPractice() string {
+	db, err := sql.Open("mysql", "root:120625@/elearning")
+	if err != nil {
+		panic(err.Error())
+	}
+	defer db.Close()
+
+	var pslist []model.PaketSoal
+	getPaketSoal, err := db.Query("SELECT * FROM paketsoal")
+	if err != nil {
+		panic(err)
+	}
+	defer getPaketSoal.Close()
+	for getPaketSoal.Next() {
+		ps := model.PaketSoal{}
+		err = getPaketSoal.Scan(&ps.Id_PaketSoal, &ps.Tingkat, &ps.Kelas, &ps.Mapel, &ps.Tema)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(ps)
+		pslist = append(pslist, ps)
+	}
+	err = getPaketSoal.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(pslist)
+	psjs, err := json.Marshal(pslist)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(psjs))
+	return string(psjs)
 }

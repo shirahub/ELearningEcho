@@ -76,7 +76,7 @@ func main() {
 	e.POST("/login", api.UserLogin) //ini diaccess oleh submit button
 	e.GET("/search", api.SearchPractice)
 	e.GET("/logout", api.UserLogout)
-	e.GET("/dopractice", api.ShowPractice)
+	e.GET("/dopractice/:id", api.ShowPractice)
 	e.POST("/submitanswers", api.GetAnswers)
 
 	r := e.Group("/user")

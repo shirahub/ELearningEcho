@@ -11,6 +11,7 @@ import (
 )
 
 func ShowPractice(c echo.Context) error {
+	id := c.Param("id")
 	db, err := sql.Open("mysql", "root:120625@/elearning")
 	if err != nil {
 		panic(err.Error())
@@ -18,7 +19,7 @@ func ShowPractice(c echo.Context) error {
 	defer db.Close()
 
 	var soallist []model.Soal
-	getSoal, err := db.Query("SELECT id_soal, pertanyaan, jawaban, pilihan1, pilihan2, pilihan3 FROM soal WHERE id_paketsoal=?", 1)
+	getSoal, err := db.Query("SELECT id_soal, pertanyaan, jawaban, pilihan1, pilihan2, pilihan3 FROM soal WHERE id_paketsoal=?", id)
 	if err != nil {
 		panic(err)
 	}
