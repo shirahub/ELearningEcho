@@ -19,4 +19,26 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
+type PaketSoal struct {
+	Id_PaketSoal int
+	Tingkat      string
+	Kelas        string
+	Mapel        string
+	Tema         string
+}
+
+// type Soal struct {
+// 	Pertanyaan string `json: "pertanyaan"`
+// 	Pilihan1   string `json: "pilihan1"`
+// 	Pilihan2   string `json: "pilihan2"`
+// 	Pilihan3   string `json: "pilihan3"`
+// 	Pilihan4   string `json: "pilihan4"`
+// }
+
+type Soal struct {
+	Id_Soal    int
+	Pertanyaan string    `json: "pertanyaan"`
+	Pilihan    [4]string `json: "pilihan"`
+}
+
 type M map[string]interface{}

@@ -46,7 +46,7 @@ func UserLogin(c echo.Context) error {
 		log.Fatal(err)
 		data := model.M{"message": "NOT FOUND"}
 
-		return c.Render(http.StatusOK, "user.html", data)
+		return c.Render(http.StatusOK, "homepage.html", data)
 	}
 	fmt.Println(userData)
 

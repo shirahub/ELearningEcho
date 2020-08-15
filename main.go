@@ -74,6 +74,10 @@ func main() {
 	e.GET("/home", api.HomePage) //access ini di browser
 	e.GET("/loginpage", api.LoginPage)
 	e.POST("/login", api.UserLogin) //ini diaccess oleh submit button
+	e.GET("/search", api.SearchPractice)
+	e.GET("/logout", api.UserLogout)
+	e.GET("/dopractice", api.ShowPractice)
+	e.POST("/submitanswers", api.GetAnswers)
 
 	r := e.Group("/user")
 	r.GET("/letsstudy", api.LetsStudy)

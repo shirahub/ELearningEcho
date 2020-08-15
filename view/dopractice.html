@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerjakan Latihan</title>
+</head>
+<body>
+    <form>
+    <div id="quiz"></div>
+    <input type="submit" value="Click here to Submit">
+</form>
+    <script>
+        var jsonstring = JSON.stringify({{.message}})
+
+        var jsondata = JSON.parse(jsonstring)
+
+        // document.getElementById("demo").innerHTML = jsondata[0].Pilihan[0];
+        const output = [];
+        
+        for (let index = 0; index < jsondata.length; index++) {
+            const choices = [];
+            for(let index2=0; index2<jsondata[index].Pilihan.length;index2++) {
+            
+            choices.push(
+            `<label>
+              <input type="radio" name="${jsondata[index].Id_Soal}" value="${jsondata[index].Pilihan[index2]}"">
+              ${jsondata[index].Pilihan[index2]}
+            </label>`
+          );
+        }
+            output.push(`<div class="question"> ${jsondata[index].Pertanyaan} </div><div class="choices"> ${choices.join('')} </div>`)
+            
+        }
+        document.getElementById("quiz").innerHTML = output.join('');
+    </script>
+</body>
+</html>
