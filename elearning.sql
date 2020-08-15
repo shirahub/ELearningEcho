@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `elearning` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `elearning`;
 -- MySQL dump 10.13  Distrib 5.7.30, for Linux (x86_64)
 --
 -- Host: localhost    Database: elearning
@@ -27,8 +29,9 @@ CREATE TABLE `paketsoal` (
   `tingkat` varchar(45) DEFAULT NULL,
   `kelas` varchar(45) DEFAULT NULL,
   `mapel` varchar(45) DEFAULT NULL,
+  `tema` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_paketsoal`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +40,7 @@ CREATE TABLE `paketsoal` (
 
 LOCK TABLES `paketsoal` WRITE;
 /*!40000 ALTER TABLE `paketsoal` DISABLE KEYS */;
-INSERT INTO `paketsoal` VALUES (1,'SD','1','Matematika');
+INSERT INTO `paketsoal` VALUES (1,'SD','1','Matematika','Bab 1'),(2,'SD','1','Bahasa Inggris','Bab 1'),(3,'SD','2','Matematika','Bab 2');
 /*!40000 ALTER TABLE `paketsoal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +60,7 @@ CREATE TABLE `soal` (
   `pilihan2` varchar(45) DEFAULT NULL,
   `pilihan3` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_soal`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +69,7 @@ CREATE TABLE `soal` (
 
 LOCK TABLES `soal` WRITE;
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
-INSERT INTO `soal` VALUES (2,1,'1+1=','2','3','4','5'),(3,1,'2+2=','4','5','6','10'),(4,1,'3+3=','6','7','8','9'),(5,1,'1+2=','3','4','5','6'),(6,1,'2+3=','5','6','7','8');
+INSERT INTO `soal` VALUES (2,1,'1+1=','2','3','4','5'),(3,1,'2+2=','4','5','6','10'),(4,1,'3+3=','6','7','8','9'),(5,1,'1+2=','3','4','5','6'),(6,1,'2+3=','5','6','7','8'),(7,2,'Good Morning','Selamat pagi','Selamat siang','Selamat sore','Selamat malam'),(8,2,'Good Night','Selamat Malam','Selamat pagi','Selamat siang','Selamat sore'),(9,3,'2x2=','4','6','8','10'),(10,3,'3x3=','9','12','8','15'),(11,3,'4x4=','16','20','10','15');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-14 19:57:04
+-- Dump completed on 2020-08-15 15:10:07
