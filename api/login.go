@@ -41,7 +41,7 @@ func UserLogin(c echo.Context) error {
 	//single row query lalu langsung parse ke model.UserData
 	// referensi: http://go-database-sql.org/retrieving.html
 	var userData model.UserData
-	getUserData := db.QueryRow("SELECT username, fullname FROM user WHERE username=?", user.Username).Scan(&userData.Username, &userData.Fullname)
+	getUserData := db.QueryRow("SELECT id_user, username, fullname FROM user WHERE username=?", user.Username).Scan(&userData.UserId, &userData.Username, &userData.Fullname)
 	if getUserData != nil {
 		// kalau ga ketemu / nil, kirim message NOT FOUND
 		log.Fatal(err)
@@ -59,6 +59,7 @@ func UserLogin(c echo.Context) error {
 	claims := token.Claims.(jwt.MapClaims)
 	claims["name"] = userData.Fullname
 	claims["admin"] = true
+	claims["userid"] = userData.UserId
 	claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
 	// Generate encoded token and send it as response.
 	// The signing string should be secret (a generated UUID          works too)
@@ -92,7 +93,7 @@ func ShowAllPractice() string {
 	defer db.Close()
 
 	var pslist []model.PaketSoal
-	getPaketSoal, err := db.Query("SELECT * FROM paketsoal")
+	getPaketSoal, err := db.Query("SELECT id_paketsoal, tingkat, kelas, mapel, tema FROM paketsoal")
 	if err != nil {
 		panic(err)
 	}
