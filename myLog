@@ -184,3 +184,91 @@
 2020-08-15T20:15:17+07:00, method=GET, uri=/dopractice/1, status=200, error=
 2020-08-15T20:15:18+07:00, method=GET, uri=/dopractice/2, status=200, error=
 2020-08-15T20:15:20+07:00, method=GET, uri=/dopractice/3, status=200, error=
+2020-08-16T07:29:07+07:00, method=GET, uri=/user/makepractice, status=404, error=code=404, message=Not Found
+2020-08-16T07:29:44+07:00, method=GET, uri=/home, status=200, error=
+2020-08-16T07:29:46+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-16T07:29:48+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T07:29:51+07:00, method=GET, uri=/user/letsstudy, status=200, error=
+2020-08-16T07:30:09+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T07:30:10+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T07:31:32+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T07:32:05+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T07:32:51+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T07:41:26+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T08:24:26+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T08:27:14+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T08:40:17+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T08:48:43+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T08:51:25+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:02:29+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:02:49+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:20:41+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:20:50+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:21:01+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:21:12+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:21:50+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:23:34+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:23:39+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=&q%5B1%5D=&q1answer%5B1%5D=&q1choices1%5B1%5D=&q1choices2%5B1%5D=&q1choices3%5B1%5D=&q%5B2%5D=&q2answer%5B2%5D=&q2choices1%5B2%5D=&q2choices2%5B2%5D=&q2choices3%5B2%5D=&q%5B3%5D=&q3answer%5B3%5D=&q3choices1%5B3%5D=&q3choices2%5B3%5D=&q3choices3%5B3%5D=, status=200, error=
+2020-08-16T09:23:43+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=&q%5B1%5D=&q1answer%5B1%5D=&q1choices1%5B1%5D=&q1choices2%5B1%5D=&q1choices3%5B1%5D=&q%5B2%5D=&q2answer%5B2%5D=&q2choices1%5B2%5D=&q2choices2%5B2%5D=&q2choices3%5B2%5D=&q%5B3%5D=&q3answer%5B3%5D=&q3choices1%5B3%5D=&q3choices2%5B3%5D=&q3choices3%5B3%5D=, status=200, error=
+2020-08-16T09:24:05+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=&q%5B1%5D=&q1answer%5B1%5D=&q1choices1%5B1%5D=&q1choices2%5B1%5D=&q1choices3%5B1%5D=&q%5B2%5D=&q2answer%5B2%5D=&q2choices1%5B2%5D=&q2choices2%5B2%5D=&q2choices3%5B2%5D=&q%5B3%5D=&q3answer%5B3%5D=&q3choices1%5B3%5D=&q3choices2%5B3%5D=&q3choices3%5B3%5D=, status=200, error=
+2020-08-16T09:24:21+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=&q%5B1%5D=&q1answer%5B1%5D=&q1choices1%5B1%5D=&q1choices2%5B1%5D=&q1choices3%5B1%5D=&q%5B2%5D=&q2answer%5B2%5D=&q2choices1%5B2%5D=&q2choices2%5B2%5D=&q2choices3%5B2%5D=&q%5B3%5D=&q3answer%5B3%5D=&q3choices1%5B3%5D=&q3choices2%5B3%5D=&q3choices3%5B3%5D=, status=200, error=
+2020-08-16T09:29:30+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=&q%5B1%5D=&q1answer%5B1%5D=&q1choices1%5B1%5D=&q1choices2%5B1%5D=&q1choices3%5B1%5D=&q%5B2%5D=&q2answer%5B2%5D=&q2choices1%5B2%5D=&q2choices2%5B2%5D=&q2choices3%5B2%5D=&q%5B3%5D=&q3answer%5B3%5D=&q3choices1%5B3%5D=&q3choices2%5B3%5D=&q3choices3%5B3%5D=, status=200, error=
+2020-08-16T09:29:35+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=, status=200, error=
+2020-08-16T09:29:36+07:00, method=GET, uri=/user/makepractice?slct1=&mapel=&tema=, status=200, error=
+2020-08-16T09:29:48+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:31:06+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:32:34+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:33:37+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:33:45+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:34:50+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:37:29+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:37:53+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:38:52+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:39:13+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T09:40:30+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:08:24+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:13:40+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:13:53+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:20:33+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:20:57+07:00, method=POST, uri=/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T10:26:52+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:26:58+07:00, method=POST, uri=/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T10:27:44+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:27:49+07:00, method=POST, uri=/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T10:28:29+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:28:54+07:00, method=GET, uri=/home, status=200, error=
+2020-08-16T10:28:56+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-16T10:28:58+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T10:29:00+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:29:07+07:00, method=POST, uri=/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T10:32:25+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T10:59:00+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T10:59:01+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T10:59:06+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:00:15+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:00:32+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:01:03+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:01:08+07:00, method=POST, uri=/user/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T11:01:31+07:00, method=POST, uri=/user/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T11:01:40+07:00, method=POST, uri=/user/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T11:02:14+07:00, method=GET, uri=/home, status=200, error=
+2020-08-16T11:02:15+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-16T11:02:17+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T11:02:18+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:02:23+07:00, method=POST, uri=/user/user/savepractice, status=404, error=code=404, message=Not Found
+2020-08-16T11:02:56+07:00, method=GET, uri=/login, status=405, error=code=405, message=Method Not Allowed
+2020-08-16T11:03:01+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-16T11:03:03+07:00, method=POST, uri=/login, status=200, error=
+2020-08-16T11:03:04+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:03:10+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:31:52+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:31:53+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:31:57+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:38:18+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:38:22+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-16T11:51:43+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:53:38+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:53:39+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:55:09+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:58:15+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-16T11:58:51+07:00, method=POST, uri=/user/savepractice, status=200, error=

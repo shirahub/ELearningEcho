@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Latihan</title>
+</head>
+
+<body>
+    <h2>Buat Soal</h2>
+    <hr />
+    <form method="POST" action="/user/savepractice">
+        Pilih tingkat
+        <select id="slct1" name="tingkat" onchange="populate(this.id,'slct2')">
+            <option value=""></option>
+            <option value="SD">SD</option>
+            <option value="SMP">SMP</option>
+            <option value="SMA">SMA</option>
+            <option value="Umum">Umum</option>
+        </select>
+        <hr />
+        Pilih kelas
+        <select id="slct2" name="kelas"></select>
+        <hr />
+        Masukkan mata pelajaran
+        <select name="mapel">
+            <option value=""></option>
+            <option value="Matematika">Matematika</option>
+            <option value="Bahasa Inggris">Bahasa Inggris</option>
+            <option value="Bahasa Mandarin">Bahasa Mandarin</option>
+            <option value="Komputer">Komputer</option>
+            <option value="Lain-lain">Lain-lain</option>
+        </select>
+        <hr />
+        Masukkan tema
+        <input type="text" name="tema">
+        <hr />
+        <div id="new-question-container">
+            <!-- Masukkan pertanyaan 1
+            <input type="text" name="q[1]"><br>
+            Masukkan jawaban
+            <input type="text" name="q1answer[1]"><br>
+            Masukkan pilihan 1
+            <input type="text" name="q1choices1[1]"><br>
+            Masukkan pilihan 2
+            <input type="text" name="q1choices2[1]"><br>
+            Masukkan pilihan 3
+            <input type="text" name="q1choices3[1]"><br> -->
+        </div>
+        <a href="javascript:new_question();" id="tambah-pertanyaan">Tambah Pertanyaan</a>
+        <hr />
+        <input type="submit" value="Selesai">
+    </form>
+
+</body>
+
+<script>
+    let i = 1;
+    function new_question() {
+        
+        document.getElementById('tambah-pertanyaan').onclick = function () {
+            let template = `
+             Masukkan pertanyaan
+             <input type="text" name="question"><br>
+             <div><a href="javascript:delIt(${i})">Hapus</a></div>
+             Masukkan jawaban
+             <input type="text" name="answer"><br>
+             Masukkan pilihan 1
+             <input type="text" name="choices1"><br>
+             Masukkan pilihan 2
+             <input type="text" name="choices2"><br>
+             Masukkan pilihan 3
+             <input type="text" name="choices3"><br>
+         `;
+
+            let container = document.getElementById('new-question-container');
+            let div = document.createElement('div');
+            div.id = i;
+            div.innerHTML = template;
+            container.appendChild(div);
+
+            i++;
+        }
+    }
+    function delIt(eleId) {
+        d = document;
+        var ele = d.getElementById(eleId);
+        var parentEle = d.getElementById('new-question-container');
+        parentEle.removeChild(ele);
+    }
+
+    function populate(s1, s2) {
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+        s2.innerHTML = "";
+        if (s1.value == "SD") {
+            var optionArray = ["|", "1|Kelas 1", "2|Kelas 2", "3|Kelas 3", "4|Kelas 4", "5|Kelas 5", "6|Kelas 6"];
+        } else if (s1.value == "SMP") {
+            var optionArray = ["|", "7|Kelas 7", "8|Kelas 8", "9|Kelas 9"];
+        } else if (s1.value == "SMA") {
+            var optionArray = ["|", "10|Kelas 10", "11|Kelas 11", "12|Kelas 12"];
+        } else if (s1.value == "Umum") {
+            var optionArray = ["|", "Umum|Umum"]
+        }
+        for (var option in optionArray) {
+            var pair = optionArray[option].split("|");
+            var newOption = document.createElement("option");
+            newOption.value = pair[0];
+            newOption.innerHTML = pair[1];
+            s2.options.add(newOption);
+        }
+    }
+</script>
+
+</form>
+</body>
+
+</html>

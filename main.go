@@ -81,6 +81,8 @@ func main() {
 
 	r := e.Group("/user")
 	r.GET("/letsstudy", api.LetsStudy)
+	r.GET("/makepractice", api.MakePractice)
+	r.POST("/savepractice", api.SavePractice)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
