@@ -6,7 +6,9 @@
     <title>Kerjakan Latihan</title>
 </head>
 <body>
-    <form>
+    <h2>{{.tingkat}}-Kelas {{.kelas}}-{{.mapel}}-{{.tema}}</h2>
+
+    <form method="POST" action="/submitanswers/{{.id}}/{{.tingkat}}/{{.kelas}}/{{.mapel}}/{{.tema}}">
     <div id="quiz"></div>
     <input type="submit" value="Click here to Submit">
 </form>
@@ -23,13 +25,13 @@
             for(let index2=0; index2<jsondata[index].Pilihan.length;index2++) {
             
             choices.push(
-            `<label>
-              <input type="radio" name="${jsondata[index].Id_Soal}" value="${jsondata[index].Pilihan[index2]}"">
+            `<label> 
+              <input type="radio" name="answerno${index}" value="${jsondata[index].Pilihan[index2]}"">
               ${jsondata[index].Pilihan[index2]}
             </label>`
           );
         }
-            output.push(`<div class="question"> ${jsondata[index].Pertanyaan} </div><div class="choices"> ${choices.join('')} </div>`)
+            output.push(`<div class="question">${index+1}. ${jsondata[index].Pertanyaan} </div><div class="choices"> ${choices.join('')} </div>`)
             
         }
         document.getElementById("quiz").innerHTML = output.join('');

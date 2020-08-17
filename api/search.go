@@ -3,6 +3,7 @@ package api
 import (
 	"E-LearningEcho/model"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"net/http"
 
@@ -15,9 +16,6 @@ func SearchPractice(c echo.Context) error {
 		panic(err.Error())
 	}
 	defer db.Close()
-
-	//single row query lalu langsung parse ke model.UserData
-	// referensi: http://go-database-sql.org/retrieving.html
 
 	var pslist []model.PaketSoal
 	getPaketSoal, err := db.Query("SELECT * FROM paketsoal")
@@ -40,8 +38,13 @@ func SearchPractice(c echo.Context) error {
 	}
 
 	fmt.Println(pslist)
-	//data := model.M{"message": "NOT FOUND"}
+	psjs, err := json.Marshal(pslist)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(psjs))
+	data := model.M{"message": string(psjs)}
 
-	// return c.Render(http.StatusOK, "user.html", data)
-	return c.String(http.StatusOK, "tes")
+	return c.Render(http.StatusOK, "user.html", data)
+	// return c.String(http.StatusOK, "tes")
 }
