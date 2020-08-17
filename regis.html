@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    * {box-sizing: border-box;}
+    .input-container {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .icon {
+        padding: 10px;
+        background:-webkit-linear-gradient(right, #a6f77b, #2ec06f);
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #a6f77b;
+        outline: none;
+    }
+    .input-field:focus {
+        border: 1px solid #a6f77b;
+    }
+    .btn {
+        background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    .btn:hover {
+        opacity: 1;
+    }
+    form {
+        max-width:320px;
+        background: #f5f5f5;
+        padding: 10px;
+        border: 1px solid #a6f77b;
+        border-radius: 5px;
+        margin:auto;
+    }
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+<h2>Register Elearning Account</h2>
+
+<!-- Form -->
+<form method="post" action="/regist" id="registform">
+    <div class="input-container">
+        <i class="fa fa-user icon"></i>
+<!-- pattern==facebook username, min 5char)-->
+        <input class="input-field" type="text" required placeholder="Username (Min 5 char)" name="username" pattern="^[a-z\d\.]{5,}$">
+    </div>
+
+    <div class="input-container">
+        <i class="fa fa-key icon"></i>
+<!--pattern = include(Number, Uper dan Lowercase,minimal 8char)-->
+        <input class="input-field" type="text" required placeholder="Num,Uper&lowercase,at least 8 or more" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    </div>
+
+
+    <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" required placeholder="Fullname" name="fullname">
+    </div>
+
+    <button onclick="myFunc()" type="submit" class="btn">SUBMIT</button>
+</form>
+<script>
+    function myFunc(){
+        alert("Registrasi sukses")
+    }
+</script>
+
+</body>
+</html>
