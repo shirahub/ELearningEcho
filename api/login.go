@@ -1,6 +1,7 @@
 package api
 
 import (
+	"E-LearningEcho/auth"
 	"E-LearningEcho/model"
 	"database/sql"
 	"encoding/json"
@@ -48,6 +49,25 @@ func UserLogin(c echo.Context) error {
 	}
 
 	data := model.M{"name": userData.Fullname, "pslist": pslist}
+	return c.Render(http.StatusOK, "user.html", data)
+}
+
+func UserMenu(c echo.Context) error {
+	_, err := auth.IsSessionActive(c)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": "User is not logged in"})
+	}
+
+	username, _, err := GetUsernameAndUserIdFromToken(c)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+	pslist, err := ShowAllPractice()
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+
+	data := model.M{"name": username, "pslist": pslist}
 	return c.Render(http.StatusOK, "user.html", data)
 }
 

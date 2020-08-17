@@ -78,15 +78,18 @@ func main() {
 	e.GET("/registpage", api.RegistPage)
 	e.POST("/regist", api.Regist)
 
-	e.GET("/search", api.SearchPractice)
 	e.GET("/logout", api.UserLogout)
-	e.GET("/dopractice/:id", api.ShowPractice)
-	e.POST("/submitanswers", api.GetAnswers)
+
 
 	r := e.Group("/user")
+	r.GET("/home", api.UserMenu)
 	r.GET("/letsstudy", api.LetsStudy)
 	r.GET("/makepractice", api.MakePractice)
 	r.POST("/savepractice", api.SavePractice)
+	r.GET("/dopractice/:id/:tingkat/:kelas/:mapel/:tema", api.ShowPractice)
+	r.GET("/editpractice/:id/:tingkat/:kelas/:mapel/:tema", api.EditPractice)
+	r.POST("/processedit/:id/:tingkat/:kelas/:mapel/:tema", api.SaveEdittedPractice)
+	r.POST("/submitanswers/:id/:tingkat/:kelas/:mapel/:tema", api.GetAnswers)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
