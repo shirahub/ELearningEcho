@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Latihan</title>
+    <title>Edit Practice</title>
 </head>
 
 <body>
-    <h2>Buat Soal</h2>
+    <h2>Edit Soal</h2>
     <hr />
-    <form method="POST" action="/user/savepractice">
+    <form method="POST" action="/user/processedit/{{.id}}/{{.tingkat}}/{{.kelas}}/{{.mapel}}/{{.tema}}">
         Pilih tingkat
         <select id="slct1" name="tingkat" onchange="populate(this.id,'slct2')">
             <option value=""></option>
@@ -19,12 +19,22 @@
             <option value="SMA">SMA</option>
             <option value="Umum">Umum</option>
         </select>
+        <script>
+            (function () {
+                var defaulttingkat = document.getElementById('slct1').value = '{{.tingkat}}';
+                defaulttingkat
+            })();
+        </script>
         <hr />
         Pilih kelas
-        <select id="slct2" name="kelas"></select>
+        <select id="slct2" name="kelas">
+            <option value="{{.kelas}}" selected="selected">{{.kelas}}</option>
+        </select>
+
+
         <hr />
         Masukkan mata pelajaran
-        <select name="mapel">
+        <select id="slct3" name="mapel">
             <option value=""></option>
             <option value="Matematika">Matematika</option>
             <option value="Bahasa Inggris">Bahasa Inggris</option>
@@ -32,9 +42,15 @@
             <option value="Komputer">Komputer</option>
             <option value="Lain-lain">Lain-lain</option>
         </select>
+        <script>
+            (function () {
+                var defaultmapel = document.getElementById('slct3').value = '{{.mapel}}';
+                defaultmapel
+            })();
+        </script>
         <hr />
         Masukkan tema
-        <input type="text" name="tema">
+        <input type="text" name="tema" value="{{.tema}}">
         <hr />
         <div id="new-question-container">
             <!-- Masukkan pertanyaan 1
@@ -52,13 +68,41 @@
         <hr />
         <input type="submit" value="Selesai">
     </form>
-
 </body>
 
 <script>
     let i = 1;
+        var jsonstring = JSON.stringify({{.message }})
+    var jsondata = JSON.parse(jsonstring)
+
+    for (let index = 0; index < jsondata.length; index++) {
+        let template = `
+             Masukkan pertanyaan
+             <input type="text" name="question" value=${jsondata[index].Pertanyaan}><br>
+             <div><a href="javascript:delIt(${i})">Hapus</a></div>
+             Masukkan jawaban
+             <input type="text" name="answer" value=${jsondata[index].Pilihan[0]}><br>
+             Masukkan pilihan 1
+             <input type="text" name="choices1" value=${jsondata[index].Pilihan[1]}><br>
+             Masukkan pilihan 2
+             <input type="text" name="choices2" value=${jsondata[index].Pilihan[2]}><br>
+             Masukkan pilihan 3
+             <input type="text" name="choices3" value=${jsondata[index].Pilihan[3]}><br>
+         `;
+
+         let container = document.getElementById('new-question-container');
+            let div = document.createElement('div');
+            div.id = i;
+            div.innerHTML = template;
+            container.appendChild(div);
+
+            i++;
+    }
+   
+
+
     function new_question() {
-        
+
         document.getElementById('tambah-pertanyaan').onclick = function () {
             let template = `
              Masukkan pertanyaan
@@ -89,6 +133,7 @@
         var parentEle = d.getElementById('new-question-container');
         parentEle.removeChild(ele);
     }
+
 
     function populate(s1, s2) {
         var s1 = document.getElementById(s1);

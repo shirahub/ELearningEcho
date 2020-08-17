@@ -78,10 +78,13 @@ func main() {
 	// e.GET("/search", api.SearchPractice)
 
 	r := e.Group("/user")
+	r.GET("/home", api.UserMenu)
 	r.GET("/letsstudy", api.LetsStudy)
 	r.GET("/makepractice", api.MakePractice)
 	r.POST("/savepractice", api.SavePractice)
 	r.GET("/dopractice/:id/:tingkat/:kelas/:mapel/:tema", api.ShowPractice)
+	r.GET("/editpractice/:id/:tingkat/:kelas/:mapel/:tema", api.EditPractice)
+	r.POST("/processedit/:id/:tingkat/:kelas/:mapel/:tema", api.SaveEdittedPractice)
 	r.POST("/submitanswers/:id/:tingkat/:kelas/:mapel/:tema", api.GetAnswers)
 
 	// Start server
