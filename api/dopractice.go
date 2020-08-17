@@ -5,8 +5,10 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+	"math/rand"
 	"net/http"
 	"strconv"
+	"time"
 
 	"github.com/labstack/echo"
 )
@@ -32,7 +34,10 @@ func ShowPractice(c echo.Context) error {
 	defer getSoal.Close()
 	for getSoal.Next() {
 		so := model.Soal{}
-		err = getSoal.Scan(&so.Id_Soal, &so.Pertanyaan, &so.Pilihan[0], &so.Pilihan[1], &so.Pilihan[2], &so.Pilihan[3])
+		rand.Seed(time.Now().UnixNano())
+		p := rand.Perm(4)
+
+		err = getSoal.Scan(&so.Id_Soal, &so.Pertanyaan, &so.Pilihan[p[0]], &so.Pilihan[p[1]], &so.Pilihan[p[2]], &so.Pilihan[p[3]])
 		if err != nil {
 			panic(err)
 		}

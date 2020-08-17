@@ -376,3 +376,6 @@
 2020-08-17T11:14:01+07:00, method=GET, uri=/dopractice/3/SD/2/Matematika/Bab%202, status=200, error=
 2020-08-17T11:14:03+07:00, method=POST, uri=/submitanswers/3/SD/2/Matematika/Bab%202, status=200, error=
 2020-08-17T11:14:07+07:00, method=GET, uri=/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T11:24:54+07:00, method=GET, uri=/dopractice/1/SD/1/Matematika/Bab%201, status=500, error=
+2020-08-17T11:25:10+07:00, method=GET, uri=/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T11:25:15+07:00, method=POST, uri=/submitanswers/1/SD/1/Matematika/Bab%201, status=200, error=
