@@ -2,7 +2,6 @@ package api
 
 import (
 	"E-LearningEcho/model"
-	"fmt"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo"
@@ -13,8 +12,6 @@ func GetUsernameAndUserIdFromToken(c echo.Context) (string, int, error) {
 	if err != nil {
 		return "token not found in cookie", 0, err
 	}
-	fmt.Println(cookie.Name)
-	fmt.Println(cookie.Value)
 
 	tknStr := cookie.Value
 
@@ -48,8 +45,6 @@ func GetUserIdFromToken(c echo.Context) (int, error) {
 	if err != nil {
 		return 0, err
 	}
-	fmt.Println(cookie.Name)
-	fmt.Println(cookie.Value)
 
 	tknStr := cookie.Value
 

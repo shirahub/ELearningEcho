@@ -1,6 +1,7 @@
 package api
 
 import (
+	"E-LearningEcho/auth"
 	"E-LearningEcho/model"
 	"net/http"
 	"time"
@@ -9,6 +10,11 @@ import (
 )
 
 func UserLogout(c echo.Context) error {
+
+	_, err := auth.IsSessionActive(c)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": "User is not logged in"})
+	}
 	cookie := new(http.Cookie)
 	cookie.HttpOnly = true
 	cookie.Name = "token"

@@ -8,7 +8,7 @@ import (
 )
 
 func HomePage(c echo.Context) error {
-	data := model.M{"message": "This is the homepage"}
+	data := model.M{"message": "Heyy"}
 	return c.Render(http.StatusOK, "homepage.html", data)
 }
 

@@ -4,7 +4,6 @@ import (
 	"E-LearningEcho/model"
 	"database/sql"
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -29,7 +28,6 @@ func SearchPractice(c echo.Context) error {
 		if err != nil {
 			panic(err)
 		}
-		fmt.Println(ps)
 		pslist = append(pslist, ps)
 	}
 	err = getPaketSoal.Err()
@@ -37,14 +35,11 @@ func SearchPractice(c echo.Context) error {
 		panic(err)
 	}
 
-	fmt.Println(pslist)
 	psjs, err := json.Marshal(pslist)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(string(psjs))
 	data := model.M{"message": string(psjs)}
 
 	return c.Render(http.StatusOK, "user.html", data)
-	// return c.String(http.StatusOK, "tes")
 }

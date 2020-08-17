@@ -74,15 +74,15 @@ func main() {
 	e.GET("/home", api.HomePage) //access ini di browser
 	e.GET("/loginpage", api.LoginPage)
 	e.POST("/login", api.UserLogin) //ini diaccess oleh submit button
-	e.GET("/search", api.SearchPractice)
 	e.GET("/logout", api.UserLogout)
-	e.GET("/dopractice/:id/:tingkat/:kelas/:mapel/:tema", api.ShowPractice)
-	e.POST("/submitanswers/:id/:tingkat/:kelas/:mapel/:tema", api.GetAnswers)
+	// e.GET("/search", api.SearchPractice)
 
 	r := e.Group("/user")
 	r.GET("/letsstudy", api.LetsStudy)
 	r.GET("/makepractice", api.MakePractice)
 	r.POST("/savepractice", api.SavePractice)
+	r.GET("/dopractice/:id/:tingkat/:kelas/:mapel/:tema", api.ShowPractice)
+	r.POST("/submitanswers/:id/:tingkat/:kelas/:mapel/:tema", api.GetAnswers)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))

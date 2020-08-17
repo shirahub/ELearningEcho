@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>User Portal</title>
     </head>
     <body>
         <h1>Let's Study, {{.name}}!</h1>
@@ -18,7 +18,7 @@
             var jsondata = JSON.parse(jsonstring)
             const output = [];
             for (let index = 0; index < jsondata.length; index++) {
-                output.push(`<div class="paketsoal"> <a href="./dopractice/${jsondata[index].Id_PaketSoal}/${jsondata[index].Tingkat}/${jsondata[index].Kelas}/${jsondata[index].Mapel}/${jsondata[index].Tema}">${jsondata[index].Tingkat}-${jsondata[index].Kelas}-${jsondata[index].Mapel}-${jsondata[index].Tema} </a></div>
+                output.push(`<div class="paketsoal"> <a href="./user/dopractice/${jsondata[index].Id_PaketSoal}/${jsondata[index].Tingkat}/${jsondata[index].Kelas}/${jsondata[index].Mapel}/${jsondata[index].Tema}">${jsondata[index].Tingkat}-${jsondata[index].Kelas}-${jsondata[index].Mapel}-${jsondata[index].Tema} </a></div>
                             `)
                 
             }
