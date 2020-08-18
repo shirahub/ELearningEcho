@@ -572,3 +572,287 @@
 2020-08-17T18:08:43+07:00, method=GET, uri=/user/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
 2020-08-17T18:08:50+07:00, method=POST, uri=/user/submitanswers/1/SD/1/Matematika/Bab%201, status=200, error=
 2020-08-17T18:08:52+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T18:46:03+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:46:05+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T18:46:09+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T18:46:12+07:00, method=GET, uri=/user/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T18:46:14+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T18:46:17+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Mat, status=200, error=
+2020-08-17T18:46:20+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Mat, status=200, error=
+2020-08-17T18:46:21+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T18:46:24+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T18:46:30+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:47:45+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:47:46+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:13+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:48:13+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:14+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:48:15+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:48+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:48:48+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:49+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:48:49+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:51+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:54+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:48:54+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:48:55+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T18:49:02+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:49:50+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:49:50+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:49:51+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:49:51+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:49:56+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:49:57+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:50:00+07:00, method=GET, uri=/registpage, status=200, error=
+2020-08-17T18:53:53+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:53:53+07:00, method=GET, uri=/view/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:53:55+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:53:55+07:00, method=GET, uri=/view/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:16+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:16+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:17+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:17+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:17+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:17+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:18+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:18+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:18+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:18+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:19+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:19+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:31+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:31+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:32+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:32+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:33+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:33+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:54:33+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:54:33+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:55:16+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:55:16+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:55:17+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:55:17+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:55:20+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:56:03+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:56:06+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:56:06+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:57:23+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:57:23+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:57:34+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:57:34+07:00, method=GET, uri=/book.png, status=404, error=code=404, message=Not Found
+2020-08-17T18:58:52+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T18:58:52+07:00, method=GET, uri=/book, status=404, error=code=404, message=Not Found
+2020-08-17T18:58:56+07:00, method=GET, uri=/book, status=404, error=code=404, message=Not Found
+2020-08-17T18:58:58+07:00, method=GET, uri=/book, status=404, error=code=404, message=Not Found
+2020-08-17T19:01:17+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T19:01:17+07:00, method=GET, uri=/book, status=404, error=code=404, message=Not Found
+2020-08-17T19:02:19+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T19:02:25+07:00, method=GET, uri=/registpage, status=200, error=
+2020-08-17T19:42:17+07:00, method=GET, uri=/registpage, status=200, error=
+2020-08-17T19:51:33+07:00, method=GET, uri=/registpage, status=200, error=
+2020-08-17T19:53:19+07:00, method=POST, uri=/regist, status=200, error=
+2020-08-17T19:53:53+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T19:54:04+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T19:54:08+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T19:55:10+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T19:55:14+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:14:23+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:14:29+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T20:14:31+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T20:14:34+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:15:11+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T20:15:15+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:16:06+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:16:21+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:16:44+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:16:46+07:00, method=GET, uri=/user/editpractice/6/SMP/7/Matematika/Bab%201, status=200, error=
+2020-08-17T20:16:52+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T20:27:19+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T20:27:21+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T20:27:25+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:27:30+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T20:29:26+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-17T20:29:58+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T20:30:12+07:00, method=GET, uri=/user/letsstudy, status=200, error=
+2020-08-17T20:30:17+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T20:30:22+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:30:25+07:00, method=GET, uri=/user/editpractice/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-17T20:30:27+07:00, method=GET, uri=/user/dopractice/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-17T20:30:33+07:00, method=POST, uri=/user/submitanswers/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-17T20:30:34+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T20:33:27+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T20:33:28+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T20:34:55+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T20:34:56+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T20:34:58+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T20:34:59+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T20:35:02+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:35:27+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T20:35:45+07:00, method=GET, uri=/user/dopractice/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-17T21:25:21+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:25:24+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:25:25+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:35:07+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:35:07+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:35:08+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:35:08+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:35:13+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:35:13+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:35:37+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:35:38+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:35:41+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:35:46+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:35:46+07:00, method=GET, uri=/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:35:48+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:35:48+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:36:02+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:36:02+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:36:05+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:36:05+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:37:23+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:37:23+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:37:24+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:37:24+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:37:27+07:00, method=GET, uri=/user/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T21:37:29+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:37:29+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:37:33+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:37:51+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:37:51+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:39:46+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:39:46+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:39:47+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:39:47+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:39:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:39:54+07:00, method=GET, uri=/user/style.css, status=404, error=code=404, message=Not Found
+2020-08-17T21:41:30+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:41:32+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:42:01+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:43:53+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:44:19+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:44:32+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:44:33+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:44:33+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:44:33+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:48:04+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:48:31+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:48:51+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:49:01+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:49:14+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:49:15+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:49:16+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:49:17+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:49:19+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:49:22+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:49:29+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:50:11+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:50:20+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:50:52+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:50:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:51:07+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:51:09+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:51:10+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:51:17+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:51:22+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:51:55+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T21:51:58+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:52:56+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:53:00+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:58:47+07:00, method=GET, uri=/home, status=200, error=
+2020-08-17T21:58:49+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:58:50+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:58:54+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T21:58:57+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-17T21:58:57+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-17T21:59:00+07:00, method=POST, uri=/login, status=200, error=
+2020-08-17T22:00:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:01:14+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:01:26+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:01:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:02:12+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:02:56+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:03:20+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:03:55+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:04:28+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:04:49+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:05:13+07:00, method=GET, uri=/user/editpractice/4/SMA/12/Matematika/Mat, status=200, error=
+2020-08-17T22:05:23+07:00, method=POST, uri=/user/processedit/4/SMA/12/Matematika/Mat, status=200, error=
+2020-08-17T22:05:24+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:05:31+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-17T22:05:35+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-17T22:05:36+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:05:39+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:06:42+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:06:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:06:55+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T22:07:02+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:07:15+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:07:38+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-17T22:07:57+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:12:26+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:12:26+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:12:27+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:12:28+07:00, method=POST, uri=/user/savepractice, status=200, error=
+2020-08-17T22:12:32+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:12:35+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:13:10+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:14:13+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:15:06+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:18:20+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:18:23+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:20:03+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-17T22:21:10+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:21:11+07:00, method=GET, uri=/user/makepractice, status=200, error=
+2020-08-17T22:21:14+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T22:21:16+07:00, method=GET, uri=/user/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T22:21:20+07:00, method=POST, uri=/user/submitanswers/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-17T22:21:23+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-17T22:21:47+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T05:29:08+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:29:14+07:00, method=GET, uri=/logout, status=200, error=
+2020-08-18T05:29:15+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-18T05:29:18+07:00, method=POST, uri=/login, status=200, error=
+2020-08-18T05:29:22+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:29:25+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:32:18+07:00, method=GET, uri=/user/editpractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:32:30+07:00, method=GET, uri=/user/editpractice/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-18T05:49:12+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T05:49:16+07:00, method=GET, uri=/user/dopractice/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:49:23+07:00, method=POST, uri=/user/submitanswers/1/SD/1/Matematika/Bab%201, status=200, error=
+2020-08-18T05:51:43+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T05:51:45+07:00, method=GET, uri=/user/dopractice/2/SD/1/Bahasa%20Inggris/Bab%201, status=200, error=
+2020-08-18T05:51:49+07:00, method=POST, uri=/user/submitanswers/2/SD/1/Bahasa%20Inggris/Bab%201, status=200, error=
+2020-08-18T05:56:13+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T05:56:15+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T05:56:17+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Easy, status=500, error=
+2020-08-18T05:56:59+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T05:57:01+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T06:04:55+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T06:04:57+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T06:12:07+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T06:12:09+07:00, method=GET, uri=/user/dopractice/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T06:12:11+07:00, method=POST, uri=/user/submitanswers/4/SMA/12/Matematika/Easy, status=200, error=
+2020-08-18T06:46:00+07:00, method=GET, uri=/home, status=200, error=
+2020-08-18T06:46:01+07:00, method=GET, uri=/favicon.ico, status=404, error=code=404, message=Not Found
+2020-08-18T06:46:02+07:00, method=GET, uri=/loginpage, status=200, error=
+2020-08-18T06:46:09+07:00, method=POST, uri=/login, status=200, error=
+2020-08-18T06:47:01+07:00, method=POST, uri=/login, status=200, error=
+2020-08-18T06:48:21+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T06:49:22+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T06:56:48+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:00:40+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:04:27+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:04:29+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:04:30+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:04:31+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:04:32+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:06:30+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:06:54+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:06:55+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:10:04+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:11:26+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:11:27+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:13:18+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:13:28+07:00, method=GET, uri=/user/dopractice/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-18T07:13:34+07:00, method=POST, uri=/user/submitanswers/8/SD/1/Matematika/Bab%203, status=200, error=
+2020-08-18T07:13:36+07:00, method=GET, uri=/user/home, status=200, error=

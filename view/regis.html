@@ -66,14 +66,14 @@
 <form method="post" action="/regist" id="registform">
     <div class="input-container">
         <i class="fa fa-user icon"></i>
-<!-- pattern==facebook username, min 5char)-->
-        <input class="input-field" type="text" required placeholder="Username (Min 5 char)" name="username" pattern="^[a-z\d\.]{5,}$">
+<!-- pattern==Email format)-->
+        <input class="input-field" type="text" required placeholder="Email Format" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
     </div>
 
     <div class="input-container">
         <i class="fa fa-key icon"></i>
 <!--pattern = include(Number, Uper dan Lowercase,minimal 8char)-->
-        <input class="input-field" type="text" required placeholder="Num,Uper&lowercase,at least 8 or more" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <input class="input-field" type="text" required placeholder="1 Num,1 Upper&lowercase,at least 8 or more" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
     </div>
 
 
@@ -82,12 +82,10 @@
         <input class="input-field" type="text" required placeholder="Fullname" name="fullname">
     </div>
 
-    <button onclick="myFunc()" type="submit" class="btn">SUBMIT</button>
+    <button type="submit" class="btn">SUBMIT</button>
 </form>
 <script>
-    function myFunc(){
-        alert("Registrasi sukses")
-    }
+
 </script>
 
 </body>

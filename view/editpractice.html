@@ -5,9 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Practice</title>
+    <style>
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 4px solid 0.9;
+            border-bottom: 2px solid lightgray;
+        }
+
+        .logo {
+            margin-left: 75px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        ul,
+        label,
+        button,
+        span {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .logout {
+            margin-top: 25px;
+            margin-right: 50px;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header-container">
+        <div class="logo">
+            <a href="/user/home">
+                <h1>Quizleen.com</h1>
+                <h2>Belajar adalah jalan ninjaku</h2>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </header>
     <h2>Edit Soal</h2>
     <hr />
     <form method="POST" action="/user/processedit/{{.id}}/{{.tingkat}}/{{.kelas}}/{{.mapel}}/{{.tema}}">
@@ -88,6 +136,7 @@
              <input type="text" name="choices2" value=${jsondata[index].Pilihan[2]}><br>
              Masukkan pilihan 3
              <input type="text" name="choices3" value=${jsondata[index].Pilihan[3]}><br>
+             <hr />
          `;
 
          let container = document.getElementById('new-question-container');

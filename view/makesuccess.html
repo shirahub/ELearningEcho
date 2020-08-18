@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Practice</title>
+    <style>
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 4px solid 0.9;
+            border-bottom: 2px solid lightgray;
+        }
+
+        .logo {
+            margin-left: 75px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        ul,
+        label,
+        button,
+        span {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .logout {
+            margin-top: 25px;
+            margin-right: 50px;
+        }
+    </style>
 </head>
+
 <body>
+    <header class="header-container">
+        <div class="logo">
+            <a href="/user/home">
+                <h1>Quizleen.com</h1>
+                <h2>Belajar adalah jalan ninjaku</h2>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </header>
     {{.message}}
+    <button onclick="window.location.href='/user/home';">Back to home</button>
 </body>
 </html>

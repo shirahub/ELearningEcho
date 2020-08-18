@@ -6,6 +6,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"net/http"
+	"strconv"
 
 	"github.com/labstack/echo"
 )
@@ -13,10 +14,25 @@ import (
 func EditPractice(c echo.Context) error {
 	_, err := auth.IsSessionActive(c)
 	if err != nil {
-		return c.Render(http.StatusOK, "error.html", model.M{"message": "User is not logged in"})
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+
+	id_user, err := GetUserIdFromToken(c)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
 	}
 
 	id := c.Param("id")
+	idint, _ := strconv.Atoi(id)
+	isUserTheMaker, err := auth.IsUserTheMaker(id_user, idint)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+
+	if isUserTheMaker == false {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": "You are not allowed to edit this practice"})
+	}
+
 	tingkat := c.Param("tingkat")
 	kelas := c.Param("kelas")
 	mapel := c.Param("mapel")

@@ -1,10 +1,28 @@
 package model
 
-import "github.com/dgrijalva/jwt-go"
+import (
+	"time"
+
+	"github.com/dgrijalva/jwt-go"
+)
 
 type User struct {
 	Username string `json:"username" form:"username" query:"username" name:"username"`
 	Password string `json:"password" form:"password" query:"password" name:"password"`
+}
+
+type UserRegist struct {
+	Username string `json:"username" form:"username" query:"username" name:"username"`
+	Password string `json:"password" form:"password" query:"password" name:"password"`
+	Fullname string `json:"fullname" form:"fullname" query:"fullname" name:"fullname"`
+}
+
+type UserHistory struct {
+	PaketId     int
+	NamaPaket   string
+	Nilai       int
+	Waktu       time.Time
+	Waktustring string
 }
 
 type UserData struct {

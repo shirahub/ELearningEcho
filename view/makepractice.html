@@ -5,14 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Latihan</title>
+    <style>
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 4px solid 0.9;
+            border-bottom: 2px solid lightgray;
+        }
+
+        .logo {
+            margin-left: 75px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        ul,
+        label,
+        button,
+        span {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .logout {
+            margin-top: 25px;
+            margin-right: 50px;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header-container">
+        <div class="logo">
+            <a href="/user/home">
+                <h1>Quizleen.com</h1>
+                <h2>Belajar adalah jalan ninjaku</h2>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </header>
     <h2>Buat Soal</h2>
     <hr />
     <form method="POST" action="/user/savepractice">
         Pilih tingkat
-        <select id="slct1" name="tingkat" onchange="populate(this.id,'slct2')">
+        <select id="slct1" name="tingkat" onchange="populate(this.id,'slct2')" required="required"
+        oninvalid="this.setCustomValidity('Please choose Tingkat')"
+        oninput="this.setCustomValidity('')">
             <option value=""></option>
             <option value="SD">SD</option>
             <option value="SMP">SMP</option>
@@ -21,10 +71,14 @@
         </select>
         <hr />
         Pilih kelas
-        <select id="slct2" name="kelas"></select>
+        <select id="slct2" name="kelas" required="required"
+        oninvalid="this.setCustomValidity('Please choose Kelas')"
+        oninput="this.setCustomValidity('')"></select>
         <hr />
         Masukkan mata pelajaran
-        <select name="mapel">
+        <select name="mapel" required="required"
+        oninvalid="this.setCustomValidity('Please choose Mata Pelajaran')"
+        oninput="this.setCustomValidity('')">
             <option value=""></option>
             <option value="Matematika">Matematika</option>
             <option value="Bahasa Inggris">Bahasa Inggris</option>
@@ -34,7 +88,9 @@
         </select>
         <hr />
         Masukkan tema
-        <input type="text" name="tema">
+        <input type="text" name="tema" required="required"
+        oninvalid="this.setCustomValidity('Please choose Tema')"
+        oninput="this.setCustomValidity('')">
         <hr />
         <div id="new-question-container">
             <!-- Masukkan pertanyaan 1
@@ -72,6 +128,7 @@
              <input type="text" name="choices2"><br>
              Masukkan pilihan 3
              <input type="text" name="choices3"><br>
+             <hr />
          `;
 
             let container = document.getElementById('new-question-container');

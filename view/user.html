@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>User Portal</title>
-    </head>
-    <body>
-        <h1>Let's Study, {{.name}}!</h1>
-        <button onclick="window.location.href='/user/makepractice';">Make My Own Practice</button>
-        <!-- <form method="post" action="/search" id="searchbox">
-			<label>Search:</label>
-			<input type="text" name="search">
-		  </form> -->
-        
-        <div id="container-list-soal"></div>
 
-        <script>
-            var jsonstring = JSON.stringify({{.pslist}})
-            var jsondata = JSON.parse(jsonstring)
-            const output = [];
-            for (let index = 0; index < jsondata.length; index++) {
-                output.push(`<div class="paketsoal"> <a href="/user/dopractice/${jsondata[index].Id_PaketSoal}/${jsondata[index].Tingkat}/${jsondata[index].Kelas}/${jsondata[index].Mapel}/${jsondata[index].Tema}">${jsondata[index].Tingkat}-${jsondata[index].Kelas}-${jsondata[index].Mapel}-${jsondata[index].Tema} </a>
+<head>
+    <title>User Portal</title>
+    <style>
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 4px solid 0.9;
+            border-bottom: 2px solid lightgray;
+        }
+
+        .logo {
+            margin-left: 75px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        ul,
+        label,
+        button,
+        span {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .logout {
+            margin-top: 25px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <a href="/user/home">
+                <h1>Quizleen.com</h1>
+                <h2>Belajar adalah jalan ninjaku</h2>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </header>
+    <h3 style="text-align: center;margin-top: 10px;">Let's Study, {{.name}}!</h3>
+    <hr />
+    <a href="/user/makepractice">Make My Own Practice</a>
+    <hr />
+    <h3>My Progress:</h3>
+    <div id="container-history"></div>
+    <hr />
+    <h3>My Practices:</h3>
+    <div id="container-list-soal"></div>
+    <hr />
+    <h3>Pick a quiz and start studying now:</h3>
+    <div id="container-list-all-soal"></div>
+
+    <script>
+        var jsonstring = JSON.stringify({{.userpslist }})
+        var jsondata = JSON.parse(jsonstring)
+        const output = [];
+        for (let index = 0; index < jsondata.length; index++) {
+            output.push(`<div class="paketsoal"> ${jsondata[index].Tingkat}-${jsondata[index].Kelas}-${jsondata[index].Mapel}-${jsondata[index].Tema}
                     <a href="/user/editpractice/${jsondata[index].Id_PaketSoal}/${jsondata[index].Tingkat}/${jsondata[index].Kelas}/${jsondata[index].Mapel}/${jsondata[index].Tema}">Edit</a></div>
                             `)
-                
-            }
-            document.getElementById("container-list-soal").innerHTML = output.join('');
-        </script>
-    </body>
+
+        }
+        document.getElementById("container-list-soal").innerHTML = output.join('');
+
+        var jsonstring2 = JSON.stringify({{.pslist }})
+        var jsondata2 = JSON.parse(jsonstring2)
+        const output2 = [];
+        for (let index = 0; index < jsondata2.length; index++) {
+            output2.push(`<div class="paketsoal"> <a href="/user/dopractice/${jsondata2[index].Id_PaketSoal}/${jsondata2[index].Tingkat}/${jsondata2[index].Kelas}/${jsondata2[index].Mapel}/${jsondata2[index].Tema}">${jsondata2[index].Tingkat}-${jsondata2[index].Kelas}-${jsondata2[index].Mapel}-${jsondata2[index].Tema} </a>
+                    </div>
+                            `)
+
+        }
+        document.getElementById("container-list-all-soal").innerHTML = output2.join('');
+
+        var jsonstring3 = JSON.stringify({{.userhistorylist }})
+        var jsondata3 = JSON.parse(jsonstring3)
+        const output3 = [];
+        for (let index = 0; index < jsondata3.length; index++) {
+            output3.push(`<div class="userhistory">${jsondata3[index].Waktustring} | ${jsondata3[index].NamaPaket} | ${jsondata3[index].Nilai}
+                    </div>
+                            `)
+
+        }
+        document.getElementById("container-history").innerHTML = output3.join('');
+    </script>
+</body>
+
 </html>

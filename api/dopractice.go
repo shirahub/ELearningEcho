@@ -106,9 +106,35 @@ func GetAnswers(c echo.Context) error {
 		}
 	}
 
+	id_user, err := GetUserIdFromToken(c)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+
 	score := (100 / answercount) * correct
+
+	id_paketsoal, _ := strconv.Atoi(id)
+	SaveUserHistory(id_user, id_paketsoal, score)
 
 	data := model.M{"tingkat": tingkat, "kelas": kelas, "mapel": mapel, "tema": tema, "id": id, "result": score}
 
 	return c.Render(http.StatusOK, "result.html", data)
+}
+
+func SaveUserHistory(id_user int, id_paketsoal int, score int) error {
+	db, err := sql.Open("mysql", "root:120625@/elearning")
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	time := time.Now()
+
+	stmt, err := db.Prepare("INSERT INTO userhistory(id_user, id_paketsoal, nilai, waktu) VALUES(?,?,?,?)")
+	if err != nil {
+		return err
+	}
+	stmt.Exec(id_user, id_paketsoal, score, time)
+
+	return nil
 }

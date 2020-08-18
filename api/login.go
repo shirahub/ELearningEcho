@@ -5,6 +5,7 @@ import (
 	"E-LearningEcho/model"
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -48,7 +49,16 @@ func UserLogin(c echo.Context) error {
 		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
 	}
 
-	data := model.M{"name": userData.Fullname, "pslist": pslist}
+	userpslist, err := ShowAllPracticeByUser(userData.UserId)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+	userhistorylist, err := ShowUserHistory(userData.UserId)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+
+	data := model.M{"name": userData.Fullname, "pslist": pslist, "userpslist": userpslist, "userhistorylist": userhistorylist}
 	return c.Render(http.StatusOK, "user.html", data)
 }
 
@@ -58,7 +68,7 @@ func UserMenu(c echo.Context) error {
 		return c.Render(http.StatusOK, "error.html", model.M{"message": "User is not logged in"})
 	}
 
-	username, _, err := GetUsernameAndUserIdFromToken(c)
+	username, id, err := GetUsernameAndUserIdFromToken(c)
 	if err != nil {
 		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
 	}
@@ -66,8 +76,16 @@ func UserMenu(c echo.Context) error {
 	if err != nil {
 		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
 	}
+	userpslist, err := ShowAllPracticeByUser(id)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
+	userhistorylist, err := ShowUserHistory(id)
+	if err != nil {
+		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})
+	}
 
-	data := model.M{"name": username, "pslist": pslist}
+	data := model.M{"name": username, "pslist": pslist, "userpslist": userpslist, "userhistorylist": userhistorylist}
 	return c.Render(http.StatusOK, "user.html", data)
 }
 
@@ -122,4 +140,103 @@ func ShowAllPractice() (string, error) {
 		return "", err
 	}
 	return string(psjs), nil
+}
+
+func ShowAllPracticeByUser(id int) (string, error) {
+
+	db, err := sql.Open("mysql", "root:120625@/elearning")
+	if err != nil {
+		return "", err
+	}
+	defer db.Close()
+
+	var pslist []model.PaketSoal
+	getPaketSoal, err := db.Query("SELECT id_paketsoal, tingkat, kelas, mapel, tema FROM paketsoal where id_user=?", id)
+	if err != nil {
+		return "", err
+	}
+	defer getPaketSoal.Close()
+	for getPaketSoal.Next() {
+		ps := model.PaketSoal{}
+		err = getPaketSoal.Scan(&ps.Id_PaketSoal, &ps.Tingkat, &ps.Kelas, &ps.Mapel, &ps.Tema)
+		if err != nil {
+			return "", err
+		}
+		pslist = append(pslist, ps)
+	}
+	err = getPaketSoal.Err()
+	if err != nil {
+		return "", err
+	}
+
+	psjs, err := json.Marshal(pslist)
+	if err != nil {
+		return "", err
+	}
+	return string(psjs), nil
+}
+
+func ShowUserHistory(id int) (string, error) {
+
+	loc, err := time.LoadLocation("Asia/Jakarta")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	db, err := sql.Open("mysql", "root:120625@/elearning?parseTime=true")
+	if err != nil {
+		return "", err
+	}
+	defer db.Close()
+
+	var uhlist []model.UserHistory
+	getUserHistory, err := db.Query("SELECT id_paketsoal, nilai, waktu FROM userhistory where id_user=?", id)
+	if err != nil {
+		return "", err
+	}
+	defer getUserHistory.Close()
+	for getUserHistory.Next() {
+		uh := model.UserHistory{}
+		err = getUserHistory.Scan(&uh.PaketId, &uh.Nilai, &uh.Waktu)
+		if err != nil {
+			return "", err
+		}
+		uhlist = append(uhlist, uh)
+	}
+	err = getUserHistory.Err()
+	if err != nil {
+		return "", err
+	}
+
+	var pslist []model.PaketSoal
+	for i := 0; i < len(uhlist); i++ {
+		getPaketSoal, err := db.Query("SELECT id_paketsoal, tingkat, kelas, mapel, tema FROM paketsoal where id_paketsoal=?", uhlist[i].PaketId)
+		if err != nil {
+			return "", err
+		}
+		defer getPaketSoal.Close()
+		for getPaketSoal.Next() {
+			ps := model.PaketSoal{}
+			err = getPaketSoal.Scan(&ps.Id_PaketSoal, &ps.Tingkat, &ps.Kelas, &ps.Mapel, &ps.Tema)
+			if err != nil {
+				return "", err
+			}
+			pslist = append(pslist, ps)
+		}
+		err = getPaketSoal.Err()
+		if err != nil {
+			return "", err
+		}
+
+		uhlist[i].NamaPaket = pslist[i].Tingkat + "-" + pslist[i].Kelas + "-" + pslist[i].Mapel + "-" + pslist[i].Tema
+
+		uhlist[i].Waktu = uhlist[i].Waktu.In(loc)
+		uhlist[i].Waktustring = uhlist[i].Waktu.Format("2006-01-02 15:04:05")
+	}
+
+	uhjs, err := json.Marshal(uhlist)
+	if err != nil {
+		return "", err
+	}
+	return string(uhjs), nil
 }
