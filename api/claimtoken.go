@@ -14,14 +14,7 @@ func GetUsernameAndUserIdFromToken(c echo.Context) (string, int, error) {
 	}
 
 	tknStr := cookie.Value
-
-	// Initialize a new instance of `Claims`
 	claims := &model.Claims{}
-
-	// Parse the JWT string and store the result in `claims`.
-	// Note that we are passing the key in this method as well. This method will return an error
-	// if the token is invalid (if it has expired according to the expiry time we set on sign in),
-	// or if the signature does not match
 	tkn, err := jwt.ParseWithClaims(tknStr, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte("secret"), nil
 	})
@@ -48,13 +41,8 @@ func GetUserIdFromToken(c echo.Context) (int, error) {
 
 	tknStr := cookie.Value
 
-	// Initialize a new instance of `Claims`
 	claims := &model.Claims{}
 
-	// Parse the JWT string and store the result in `claims`.
-	// Note that we are passing the key in this method as well. This method will return an error
-	// if the token is invalid (if it has expired according to the expiry time we set on sign in),
-	// or if the signature does not match
 	tkn, err := jwt.ParseWithClaims(tknStr, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte("secret"), nil
 	})

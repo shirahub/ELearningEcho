@@ -43,6 +43,10 @@ func SavePractice(c echo.Context) error {
 	choices2 := c.Request().Form["choices2"]
 	choices3 := c.Request().Form["choices3"]
 
+	// if tingkat =="" || kelas =="" || mapel==""|| tema =="" {
+	// 	return c.Render(http.StatusOK, "error.html", model.M{"message": "Please fill in the "})
+	// }
+
 	db, err := sql.Open("mysql", "root:120625@/elearning")
 	if err != nil {
 		return c.Render(http.StatusOK, "error.html", model.M{"message": err.Error()})

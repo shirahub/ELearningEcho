@@ -856,3 +856,4 @@
 2020-08-18T07:13:28+07:00, method=GET, uri=/user/dopractice/8/SD/1/Matematika/Bab%203, status=200, error=
 2020-08-18T07:13:34+07:00, method=POST, uri=/user/submitanswers/8/SD/1/Matematika/Bab%203, status=200, error=
 2020-08-18T07:13:36+07:00, method=GET, uri=/user/home, status=200, error=
+2020-08-18T07:17:02+07:00, method=GET, uri=/logout, status=200, error=
