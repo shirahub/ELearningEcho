@@ -71,16 +71,20 @@
         var jsonstring = JSON.stringify({{.userpslist }})
         var jsondata = JSON.parse(jsonstring)
         const output = [];
-        for (let index = 0; index < jsondata.length; index++) {
+        if (jsondata != null) {
+            for (let index = 0; index < jsondata.length; index++) {
             output.push(`<div class="paketsoal"> ${jsondata[index].Tingkat}-${jsondata[index].Kelas}-${jsondata[index].Mapel}-${jsondata[index].Tema}
                     <a href="/user/editpractice/${jsondata[index].Id_PaketSoal}/${jsondata[index].Tingkat}/${jsondata[index].Kelas}/${jsondata[index].Mapel}/${jsondata[index].Tema}">Edit</a></div>
                             `)
 
         }
+        }
+        
         document.getElementById("container-list-soal").innerHTML = output.join('');
 
         var jsonstring2 = JSON.stringify({{.pslist }})
         var jsondata2 = JSON.parse(jsonstring2)
+        
         const output2 = [];
         for (let index = 0; index < jsondata2.length; index++) {
             output2.push(`<div class="paketsoal"> <a href="/user/dopractice/${jsondata2[index].Id_PaketSoal}/${jsondata2[index].Tingkat}/${jsondata2[index].Kelas}/${jsondata2[index].Mapel}/${jsondata2[index].Tema}">${jsondata2[index].Tingkat}-${jsondata2[index].Kelas}-${jsondata2[index].Mapel}-${jsondata2[index].Tema} </a>
